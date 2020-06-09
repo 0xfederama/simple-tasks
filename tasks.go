@@ -14,13 +14,13 @@ func main() {
 	home, _ := os.LookupEnv("HOME")
 	configPath := filepath.Join(home, ".config")
 	configDirPath := filepath.Join(configPath, "simple-tasks")
-	configIconPath := filepath.Join(configPath, "tasks.png")
+	configIconPath := filepath.Join(configDirPath, "tasks.png")
 
 	if !findConfig(configPath) {
 		//Create config directory
 		os.Mkdir(configDirPath, 0700)
 
-		//Download icon and default config file in the new directory
+		//Download icon in the new directory
 		downloadFile("https://raw.githubusercontent.com/0xfederama/simple-tasks/master/resources/tasks.png", configIconPath)
 	}
 
