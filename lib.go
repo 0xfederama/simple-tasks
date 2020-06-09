@@ -4,6 +4,7 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"os/exec"
 	"path/filepath"
 
 	"github.com/gen2brain/beeep"
@@ -13,33 +14,38 @@ import (
 func createTray(icon string) []trayhost.MenuItem {
 	menuItems := []trayhost.MenuItem{
 		{
-			Title: "Webcam - turn on",
+			Title: "Webcam - enable",
 			Handler: func() {
-
+				cmd := exec.Command("sudo", "modprobe", "uvcvideo")
+				cmd.Run()
 				beeep.Alert("Simple tasks", "Webcam turned on", icon)
 			},
 		},
 		{
-			Title: "Webcam - turn off",
+			Title: "Webcam - disable",
 			Handler: func() {
-
+				cmd := exec.Command("sudo", "modprobe", "-r", "uvcvideo")
+				cmd.Run()
 				beeep.Alert("Simple tasks", "Webcam turned off", icon)
 			},
 		},
+		//TODO: Handler function to enable/disable micrphone
+		/*
 		{
-			Title: "Microphone - turn on",
+			Title: "Microphone - enable",
 			Handler: func() {
 
 				beeep.Alert("Simple tasks", "Microphone turned on", icon)
 			},
 		},
 		{
-			Title: "Microphone - turn off",
+			Title: "Microphone - disable",
 			Handler: func() {
 
-				beeep.Alert("Simple tasks", "Microphone turned on", icon)
+				beeep.Alert("Simple tasks", "Microphone turned off", icon)
 			},
 		},
+		*/
 		trayhost.SeparatorMenuItem(),
 		{
 			Title:   "Quit",
