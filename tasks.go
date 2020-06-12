@@ -31,6 +31,6 @@ func main() {
 	if err != nil {
 		return
 	}
-	trayhost.Initialize("Water Reminder", iconData, trayMenu)
+	trayhost.Initialize("Simple Tasks", iconData, trayMenu)
 	trayhost.EnterLoop()
 }

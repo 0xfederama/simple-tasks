@@ -16,7 +16,7 @@ func createTray(icon string) []trayhost.MenuItem {
 		{
 			Title: "Webcam - enable",
 			Handler: func() {
-				cmd := exec.Command("sudo", "modprobe", "uvcvideo")
+				cmd := exec.Command("pkexec", "modprobe", "uvcvideo")
 				cmd.Run()
 				beeep.Alert("Simple tasks", "Webcam turned on", icon)
 			},
@@ -24,7 +24,7 @@ func createTray(icon string) []trayhost.MenuItem {
 		{
 			Title: "Webcam - disable",
 			Handler: func() {
-				cmd := exec.Command("sudo", "modprobe", "-r", "uvcvideo")
+				cmd := exec.Command("pkexec", "modprobe", "-r", "uvcvideo")
 				cmd.Run()
 				beeep.Alert("Simple tasks", "Webcam turned off", icon)
 			},
