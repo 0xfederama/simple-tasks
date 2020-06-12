@@ -31,20 +31,20 @@ func createTray(icon string) []trayhost.MenuItem {
 		},
 		//TODO: Handler function to enable/disable micrphone
 		/*
-		{
-			Title: "Microphone - enable",
-			Handler: func() {
+			{
+				Title: "Microphone - enable",
+				Handler: func() {
 
-				beeep.Alert("Simple tasks", "Microphone turned on", icon)
+					beeep.Alert("Simple tasks", "Microphone turned on", icon)
+				},
 			},
-		},
-		{
-			Title: "Microphone - disable",
-			Handler: func() {
+			{
+				Title: "Microphone - disable",
+				Handler: func() {
 
-				beeep.Alert("Simple tasks", "Microphone turned off", icon)
+					beeep.Alert("Simple tasks", "Microphone turned off", icon)
+				},
 			},
-		},
 		*/
 		trayhost.SeparatorMenuItem(),
 		{
