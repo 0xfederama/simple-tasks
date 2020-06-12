@@ -1,6 +1,6 @@
 # Simple Tasks
 
-[![Build Status](https://travis-ci.com/0xfederama/simple-tasks.svg?branch=master)](https://travis-ci.com/0xfederama/water-reminder) [![Go Report Card](https://goreportcard.com/badge/github.com/0xfederama/simple-tasks)](https://goreportcard.com/report/github.com/0xfederama/simple-tasks) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Build Status](https://travis-ci.com/0xfederama/simple-tasks.svg?branch=master)](https://travis-ci.com/0xfederama/water-reminder) [![Go Report Card](https://goreportcard.com/badge/github.com/0xfederama/simple-tasks?)](https://goreportcard.com/report/github.com/0xfederama/simple-tasks?) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 :hammer_and_wrench: :hammer_and_wrench: :hammer_and_wrench:
 
