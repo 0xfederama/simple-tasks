@@ -29,23 +29,22 @@ func createTray(icon string) []trayhost.MenuItem {
 				beeep.Alert("Simple tasks", "Webcam turned off", icon)
 			},
 		},
-		//TODO: Handler function to enable/disable micrphone
-		/*
-			{
-				Title: "Microphone - enable",
-				Handler: func() {
-
-					beeep.Alert("Simple tasks", "Microphone turned on", icon)
-				},
+		{
+			Title: "Microphone - enable",
+			Handler: func() {
+				cmd := exec.Command("pkexec", "amixer", "set", "Capture", "cap")
+				cmd.Run()
+				beeep.Alert("Simple tasks", "Microphone turned on", icon)
 			},
-			{
-				Title: "Microphone - disable",
-				Handler: func() {
-
-					beeep.Alert("Simple tasks", "Microphone turned off", icon)
-				},
+		},
+		{
+			Title: "Microphone - disable",
+			Handler: func() {
+				cmd := exec.Command("pkexec", "amixer", "set", "Capture", "nocap")
+				cmd.Run()
+				beeep.Alert("Simple tasks", "Microphone turned off", icon)
 			},
-		*/
+		},
 		trayhost.SeparatorMenuItem(),
 		{
 			Title:   "Quit",
