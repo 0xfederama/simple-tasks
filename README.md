@@ -8,6 +8,25 @@ Manage webcam :camera: and microphone :microphone: with this simple taskbar app.
 
 ![Simple-Tasks](https://github.com/0xfederama/simple-tasks/blob/master/.screenshots/tasks.png)
 
+# Download and compile from source
+
+- Download Go 1.16.3 [here](https://golang.org/dl/)
+- Clone the repository and cd into it
+  ```
+  git clone https://github.com/0xfederama/simple-tasks
+  cd simple-tasks
+  ```
+- Then you can execute the code in two ways:
+  - Run directly with Go
+    ```
+    go run .
+    ```
+  - Compile and run the executable
+    ```
+    go build -o simple-tasks
+    ./simpe-tasks
+    ```
+
 # Installation
 
 ### Linux
